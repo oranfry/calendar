@@ -1,5 +1,5 @@
 <?php
-namespace linetype;
+namespace calendar\linetype;
 
 class event extends \Linetype
 {

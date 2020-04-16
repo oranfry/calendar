@@ -1,5 +1,5 @@
 <?php
-namespace blend;
+namespace calendar\blend;
 
 class calendar extends \Blend
 {
