@@ -19,31 +19,31 @@ class event extends \Linetype
             (object) [
                 'name' => 'date',
                 'type' => 'date',
-                'fuse' => 't.date',
+                'fuse' => '{t}.date',
                 'groupable' => true,
                 'main' => true,
             ],
             (object) [
                 'name' => 'title',
                 'type' => 'text',
-                'fuse' => 't.title',
+                'fuse' => '{t}.title',
             ],
             (object) [
                 'name' => 'time',
                 'type' => 'number',
-                'fuse' => 't.time',
+                'fuse' => '{t}.time',
             ],
             (object) [
                 'name' => 'description',
                 'type' => 'text',
-                'fuse' => 't.description',
+                'fuse' => '{t}.description',
             ],
         ];
         $this->unfuse_fields = [
-            't.date' => ':date',
-            't.title' => ':title',
-            't.time' => ':time',
-            't.description' => ':description',
+            '{t}.date' => ':{t}_date',
+            '{t}.title' => ':{t}_title',
+            '{t}.time' => ':{t}_time',
+            '{t}.description' => ':{t}_description',
         ];
     }
 
