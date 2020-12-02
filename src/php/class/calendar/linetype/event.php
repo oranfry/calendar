@@ -40,10 +40,22 @@ class event extends \Linetype
             ],
         ];
         $this->unfuse_fields = [
-            '{t}.date' => ':{t}_date',
-            '{t}.title' => ':{t}_title',
-            '{t}.time' => ':{t}_time',
-            '{t}.description' => ':{t}_description',
+            '{t}.date' => (object) [
+                'expression' => ':{t}_date',
+                'type' => 'date',
+            ],
+            '{t}.title' => (object) [
+                'expression' => ':{t}_title',
+                'type' => 'varchar(255)',
+            ],
+            '{t}.time' => (object) [
+                'expression' => ':{t}_time',
+                'type' => 'int',
+            ],
+            '{t}.description' => (object) [
+                'expression' => ':{t}_description',
+                'type' => 'text',
+            ],
         ];
     }
 
